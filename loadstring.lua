@@ -1,1 +1,1 @@
-loadstring(HttpGet("https://raw.githubusercontent.com/ShaanDaBest/AeroHub/refs/heads/main/Hub"))()
+loadstring(HttpGet("https://raw.githubusercontent.com/ShaanDaBest/AeroHub/refs/heads/main/aerohub.lua"))()
