@@ -41,20 +41,12 @@ local PlayerTab = MainWindow:CreateTab("Player", 4483362458) -- Title, Image
 
 local PlayerSection = PlayerTab:CreateSection("Movement")
 
-local PlayerSlider = MainTab:CreateSlider({
+local Slider = PlayerTab:CreateSlider({
     Name = "WalkSpeed",
     Range = {0, 100},
     Increment = 1,
     Suffix = "WS",
     CurrentValue = 16,
     Flag = "WSslider",
-    Callback = function(Value)
-        local player = game.Players.LocalPlayer
-        local character = player.Character or player.CharacterAdded:Wait()
-        local humanoid = character:FindFirstChild("Humanoid")
-
-        if humanoid then
-            humanoid.WalkSpeed = Value
-        end
-    end,
-})
+    Callback = function(ws)
+       workspace.live.localPlayer.humanoid.walkSpeed = ws
